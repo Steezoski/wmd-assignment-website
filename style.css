@@ -149,3 +149,15 @@ img {
     border-radius: 8px;
     margin-bottom: 10px;
 }
+.president-image {
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.president-image:hover {
+    transform: scale(1.1);
+}
+
