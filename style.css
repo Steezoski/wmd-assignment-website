@@ -1,0 +1,61 @@
+/* style.css */
+
+/* Set full-page background image */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('botswana-flagbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; /* Ensure text is readable */
+}
+
+/* Wrapper for flexbox layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 51, 102, 0.85); /* semi-transparent navbar */
+    padding: 10px;
+    margin: 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent background for readability */
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Footer at the bottom */
+footer {
+    background-color: rgba(0, 51, 102, 0.85);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive menu for mobile */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    main {
+        margin: 10px;
+    }
+}
