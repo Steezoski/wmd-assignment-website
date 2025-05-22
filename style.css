@@ -1,61 +1,130 @@
-/* style.css */
-
-/* Set full-page background image */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: url('botswana-flagbg.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000; /* Ensure text is readable */
+    color: #000;
 }
 
-/* Wrapper for flexbox layout */
+/* Header and Navigation */
+.site-header {
+    background-color: rgba(0, 51, 102, 0.9);
+    padding: 10px 0;
+}
+
 .wrapper {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
-/* Navigation bar */
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    background-color: rgba(0, 51, 102, 0.85); /* semi-transparent navbar */
-    padding: 10px;
+    flex-wrap: wrap;
+    padding: 0;
     margin: 0;
 }
+
+nav ul li {
+    margin: 0 10px;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Main content styling */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
 main {
-    flex: 1;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent background for readability */
+    background-color: rgba(255, 255, 255, 0.95);
     margin: 20px;
     border-radius: 10px;
 }
 
-/* Footer at the bottom */
+/* Footer */
 footer {
-    background-color: rgba(0, 51, 102, 0.85);
+    background-color: rgba(0, 51, 102, 0.9);
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Responsive menu for mobile */
-@media (max-width: 600px) {
+/* Feedback Form */
+form {
+    background-color: #ffffffd0;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #003366;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005599;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul {
         flex-direction: column;
-        text-align: center;
+        width: 100%;
     }
-    main {
-        margin: 10px;
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
